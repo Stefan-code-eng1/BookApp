@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:autofillHints=""
+        android:hint="@string/book_name"
+        android:inputType="text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:minHeight="48dp"/>
+
+    <EditText
+        android:id="@+id/authorInput"
+        android:autofillHints=""
+        android:hint="@string/author_name"
+        android:inputType="text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/genreInput"
+        android:autofillHints=""
+        android:hint="@string/genre_name"
+        android:inputType="text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:minHeight="48dp"/>
+
+    <EditText
+        android:id="@+id/reviewsInput"
+        android:autofillHints=""
+        android:hint="@string/reviews_name"
+        android:inputType="numberDecimal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_book" />
+</LinearLayout>

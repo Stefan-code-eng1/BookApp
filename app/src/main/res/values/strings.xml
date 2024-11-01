@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Book Manager</string>
+    <string name="book_name">Book Title</string>
+    <string name="author_name">Author Name</string>
+    <string name="genre_name">Genre</string>
+    <string name="reviews_name">Reviews</string>
+    <string name="add_book">Add Book</string>
+    <string name="update_book">Update Book</string>
+    <string name="confirm_delete">Are you sure you want to delete this book?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+</resources>
