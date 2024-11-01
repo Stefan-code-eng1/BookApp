@@ -1,13 +1,14 @@
 package com.example.myapplication.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.data.Book
 import com.example.myapplication.repository.BookRepository
 
-class BookViewModel : ViewModel() {
-    private val repository = BookRepository()
+class BookViewModel(private val repository: BookRepository) : ViewModel() {
     private val _books = MutableLiveData(repository.getBooks())
+    val books: LiveData<List<Book>> = _books
 
     fun addBook(book: Book) {
         repository.addBook(book)
@@ -22,9 +23,5 @@ class BookViewModel : ViewModel() {
     fun removeBook(bookId: String) {
         repository.removeBook(bookId)
         _books.value = repository.getBooks()
-    }
-
-    fun getBooks(): MutableLiveData<List<Book>> {
-        return _books
     }
 }

@@ -18,10 +18,10 @@ class UpdateBookActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_book)
 
-        bookViewModel = ViewModelProvider(this)[BookViewModel::class.java]
+        bookViewModel = (application as BookApp).bookViewModel
 
         bookId = intent.getStringExtra("BOOK_ID") ?: return
-        val book = bookViewModel.getBooks().value?.find { it.id == bookId }
+        val book = bookViewModel.books.value?.find { it.id == bookId }
 
         book?.let {
             findViewById<EditText>(R.id.nameInput).setText(it.title)

@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.data.Book
 import com.example.myapplication.viewmodel.BookViewModel
 import java.util.UUID
-import androidx.lifecycle.ViewModelProvider
 
 class CreateBookActivity : AppCompatActivity() {
 
@@ -18,7 +17,7 @@ class CreateBookActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_book)
 
-        bookViewModel = ViewModelProvider(this)[BookViewModel::class.java]
+        bookViewModel = (application as BookApp).bookViewModel
 
         findViewById<Button>(R.id.saveButton).setOnClickListener {
             val name = findViewById<EditText>(R.id.nameInput).text.toString()
